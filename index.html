@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To‑Do-List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <canvas id="universe" class="universe" aria-hidden="true"></canvas>
+    <div id="snow" class="snow-layer" aria-hidden="true"></div>
+
+    <header class="page-header animate-stagger">
+        <h1 class="brand type-glow" aria-label="Sourav Mondal's To‑Do-List">
+            <span class="brand-text">Sourav Mondal's To‑Do-List</span>
+            <span class="brand-caret" aria-hidden="true"></span>
+        </h1>
+        <div id="live-clock" class="live-clock" aria-live="polite"></div>
+    </header>
+
+    <main class="app-shell">
+        <section class="glass-panel animate-stagger">
+            <div class="controls">
+                <input id="task-input" class="input" type="text" placeholder="Add a new task…" maxlength="120" autocomplete="off" />
+                <button id="add-btn" class="btn neon">
+                    <span class="btn-label">Add Task</span>
+                </button>
+            </div>
+            <div class="meta-row">
+                <button id="clear-completed" class="btn subtle" title="Remove all completed tasks">Clear Completed</button>
+                <div id="stats" class="stats" aria-live="polite"></div>
+            </div>
+
+            <div class="focus-banner" role="note">
+                <div class="focus-title">Today's Focus</div>
+                <div class="focus-sub">Make it simple. Make it beautiful. Ship it.</div>
+            </div>
+
+            <ul id="task-list" class="task-list" aria-live="polite"></ul>
+        </section>
+    </main>
+
+    <footer class="footer animate-stagger">
+        <span>WelCoMe</span>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
